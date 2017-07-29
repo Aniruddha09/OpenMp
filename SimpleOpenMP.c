@@ -6,8 +6,9 @@ int main()
 
   #pragma omp parallel 
   {
-    
-    printf("The First OpenMp Program!\n");
+
+    int tid = omp_get_thread_num();    
+    printf("The First OpenMp Program!%d\n",tid);
   }
 	return 0;
 
